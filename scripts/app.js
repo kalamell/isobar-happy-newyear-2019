@@ -121,11 +121,11 @@
 
   function level(level) {
     els.level1.classList.add('hide');
-    els.level1.classList.add('hide');
-    els.level1.classList.add('hide');
-    els.level1.classList.add('hide');
-    els.level1.classList.add('hide');
-    els.level1.classList.add('hide');
+    els.level2.classList.add('hide');
+    els.level3.classList.add('hide');
+    els.level4.classList.add('hide');
+    els.level5.classList.add('hide');
+    els.level6.classList.add('hide');
 
     if (level == 1 || level < 3) {
       els.level1.classList.remove('hide');
