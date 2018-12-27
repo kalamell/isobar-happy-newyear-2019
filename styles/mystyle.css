@@ -137,18 +137,20 @@ body {
 }
 
 .dialog {
-    background: #FFF;
-    box-shadow: 0 0 14px rgba(0, 0, 0, .24), 0 14px 28px rgba(0, 0, 0, .48);
-    min-width: 280px;
+    /* background: #FFF; */
+    /* box-shadow: 0 0 14px rgba(0, 0, 0, .24), 0 14px 28px rgba(0, 0, 0, .48); */
+    min-width: 310px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     -webkit-transform: translate(-50%, -50%) translateY(30px);
     transform: translate(-50%, -50%) translateY(30px);
     -webkit-transition: -webkit-transform 333ms cubic-bezier(0, 0, .21, 1) 50ms;
     transition: -webkit-transform 333ms cubic-bezier(0, 0, .21, 1) 50ms;
     transition: transform 333ms cubic-bezier(0, 0, .21, 1) 50ms;
-    transition: transform 333ms cubic-bezier(0, 0, .21, 1) 50ms, -webkit-transform 333ms cubic-bezier(0, 0, .21, 1) 50ms
+    transition: transform 333ms cubic-bezier(0, 0, .21, 1) 50ms, -webkit-transform 333ms cubic-bezier(0, 0, .21, 1) 50ms;
+    background: url('../images/bg-popup.png') center top no-repeat;
+    background-size: cover;
 }
 
 .card,
@@ -185,7 +187,7 @@ body {
     padding: 16px;
     background: #fff;
     margin: 16px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .mdl-button {
@@ -268,20 +270,20 @@ body {
 }
 
 .main {
-    padding-top: 60px;
+    /* padding-top: 60px; */
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     overflow-x: hidden;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch;
 }
 
 .sequence {
-    font-size: 64px;
+    font-size: 80px;
     text-align: center;
-    padding: 10px
+    padding: 10px;
 }
 
 .guess-inputs {
@@ -292,16 +294,18 @@ body {
 
 .emoji-input {
     list-style: none;
-    padding: 8px;
-    float: left
+    padding: 2px;
+    float: left;
+    text-align: center;
 }
 
 .emoji-btn {
-    font-size: 24px;
+    font-size: 48px;
     background: 0 0;
     border: none;
     cursor: pointer;
-    border-radius: 2px
+    border-radius: 2px;
+    text-align: center;
 }
 
 .emoji-btn:hover {
@@ -358,8 +362,9 @@ body {
 }
 
 .scrollable-emoji {
-    height: 65vh;
-    overflow-y: scroll
+    /* height: 65vh; */
+    overflow-y: scroll;
+    margin-top: -30px;
 }
 
 .logo-powerby {
@@ -368,11 +373,25 @@ body {
     right: 10px;
 }
 
-.start-container .card {
+.card {
     background: transparent;
     box-shadow: 0 0 0 0;
 }
 
 .img-responsive {
     width: 100%;
+}
+p {
+    font-family: 'Mitr', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 1px #000;
+}
+button.mdl-button {
+    font-family: 'Mitr', sans-serif;
+    
+}
+.mdl-button--primary.mdl-button--primary.fb, .mdl-button.mdl-button--colored.fb {
+    font-size: 20px;
+    color: #3f51b5;
 }
