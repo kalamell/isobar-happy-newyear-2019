@@ -148,6 +148,8 @@
     }
   }
 
+  var link = '';
+
   function level(level) {
     els.level1.classList.add('hide');
     els.level2.classList.add('hide');
@@ -158,16 +160,22 @@
 
     if (level >=1 && level < 3) {
       els.level1.classList.remove('hide');
+      link = '?id=1';
     } else if(level >= 3 && level < 5) {
       els.level2.classList.remove('hide');
+      link = '?id=2';
     } else if(level >= 5 && level < 6) {
       els.level3.classList.remove('hide');
+      link = '?id=3';
     } else if(level >=6 && level < 7) {
       els.level4.classList.remove('hide');
+      link = '?id=4';
     } else if(level >= 7 && level < 8) {
       els.level5.classList.remove('hide');
+      link = '?id=5';
     } else if(level >=8){
       els.level6.classList.remove('hide');
+      link = '?id=6';
     }
   }
 
@@ -195,19 +203,18 @@
       // Create the performance mark
       performance.mark('inited');
     }
+    
     document.querySelector('.btfb').addEventListener('click', function() {
       FB.ui({
         method: 'feed',
-        picture: 'https://kalamell.github.io/isobar-happy-newyear-2019/images/share-level1.png',
-        link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
+        link: 'https://www.poszee.com/isobar-hny2019/index.php' + link
       }, function(response){});
     });
 
     document.querySelector('.btfb2').addEventListener('click', function() {
       FB.ui({
         method: 'feed',
-        picture: 'https://kalamell.github.io/isobar-happy-newyear-2019/images/share-level1.png',
-        link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
+        link: 'https://www.poszee.com/isobar-hny2019/index.php' + link
       }, function(response){});
     });
 
