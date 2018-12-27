@@ -169,6 +169,7 @@
     document.querySelector('.btfb').addEventListener('click', function() {
       FB.ui({
         method: 'feed',
+        picture: 'https://kalamell.github.io/isobar-happy-newyear-2019/images/share-level1.png',
         link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
       }, function(response){});
     });
@@ -176,6 +177,7 @@
     document.querySelector('.btfb2').addEventListener('click', function() {
       FB.ui({
         method: 'feed',
+        picture: 'https://kalamell.github.io/isobar-happy-newyear-2019/images/share-level1.png',
         link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
       }, function(response){});
     });
@@ -191,6 +193,6 @@
              .register('service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }*/
-  
+
 
 })();
