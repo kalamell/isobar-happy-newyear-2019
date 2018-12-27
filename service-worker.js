@@ -3,7 +3,7 @@ var cacheName = 'recall-1';
 var filesToCache = [
   '',
   'index.html',
-  '/emojiquence/index.html?homescreen=1',
+  '/isobar-happy-newyear-2019/index.html?homescreen=1',
   'scripts/app.js',
   'images/ic_refresh_white_24px.svg',
   'images/icons/icon-192x192.png'
