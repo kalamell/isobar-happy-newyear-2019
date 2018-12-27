@@ -7,6 +7,7 @@
   var currentTimeout;
   var els = {
     startContainer: document.querySelector('.start-container'),
+    introContainer: document.querySelector('.intro-container'),
     sequenceContainer: document.querySelector('.sequence-container'),
     sequenceBox: document.querySelector('.sequence'),
     guessContainer: document.querySelector('.guess-container'),
@@ -27,8 +28,8 @@
     level4: document.querySelector('.level4'),
     level5: document.querySelector('.level5'),
     level6: document.querySelector('.level6'),
-
-
+    showTimeout: document.querySelector('.show-timeout'),
+    timeOut: document.querySelector('.timeout'),
   }
 
   function shuffle(array) {
@@ -75,8 +76,36 @@
     }
   }
 
+  function inTro() {
+    els.startContainer.classList.add('hide');
+    els.introContainer.classList.remove('hide');
+    var i = 5;
+    var timer;
+    setTimeout(function() {
+      els.showTimeout.classList.remove('hide');
+      timer = setInterval(function() {
+        i = i-1;
+        els.timeOut.innerHTML = i;
+        if (i == 0) {
+          clearInterval(timer);
+          startGame();
+        }
+      }, 1000);
+    }, 3000);
+
+    
+    
+  }
+
+  function countdown(i) {
+    var num = i;
+    i = i-1;
+    console.log(i);
+  }
 
   function startGame() {
+    els.introContainer.classList.add('hide');
+
     els.currentLevel.textContent = getCurrentLevel();
     els.incorrect.classList.remove('dialog-container--visible');
     els.correct.classList.remove('dialog-container--visible');
@@ -160,7 +189,7 @@
     els.tryAgain.addEventListener('click', startGame);
     els.nextLevel.addEventListener('click', startGame);
     els.refresh.addEventListener('click', startGame);
-    els.start.addEventListener('click', startGame);
+    els.start.addEventListener('click', inTro);
 
     if (performance.mark !== undefined) {
       // Create the performance mark
