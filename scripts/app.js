@@ -127,15 +127,15 @@
     els.level5.classList.add('hide');
     els.level6.classList.add('hide');
 
-    if (level == 1 || level < 3) {
+    if (level >=1 && level < 3) {
       els.level1.classList.remove('hide');
-    } else if(level >= 3 || level < 5) {
+    } else if(level >= 3 && level < 5) {
       els.level2.classList.remove('hide');
-    } else if(level >= 5 || level < 6) {
+    } else if(level >= 5 && level < 6) {
       els.level3.classList.remove('hide');
-    } else if(level >=6 || level < 7) {
+    } else if(level >=6 && level < 7) {
       els.level4.classList.remove('hide');
-    } else if(level >= 7 || level < 8) {
+    } else if(level >= 7 && level < 8) {
       els.level5.classList.remove('hide');
     } else if(level >=8){
       els.level6.classList.remove('hide');
