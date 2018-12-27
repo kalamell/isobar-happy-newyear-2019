@@ -28,6 +28,7 @@
     level5: document.querySelector('.level5'),
     level6: document.querySelector('.level6'),
 
+
   }
 
   function shuffle(array) {
@@ -165,6 +166,19 @@
       // Create the performance mark
       performance.mark('inited');
     }
+    document.querySelector('.btfb').addEventListener('click', function() {
+      FB.ui({
+        method: 'feed',
+        link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
+      }, function(response){});
+    });
+
+    document.querySelector('.btfb2').addEventListener('click', function() {
+      FB.ui({
+        method: 'feed',
+        link: 'https://kalamell.github.io/isobar-happy-newyear-2019/index.html'
+      }, function(response){});
+    });
 
 
 
